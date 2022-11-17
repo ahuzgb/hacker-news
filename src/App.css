@@ -1,0 +1,78 @@
+* {
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+a,
+u {
+  text-decoration: none;
+}
+.nav-logo {
+  color: white;
+  margin: 1 1 1 1;
+  display: inline-flex;
+  align-items: center;
+}
+
+.nav-container {
+  margin: 10 auto;
+  height: 30px;
+  font: 80;
+  background-color: orangered;
+  display: flex;
+  align-items: stretch;
+  padding-left: 1rem;
+}
+
+.nav-login {
+  display: inline-flex;
+  align-items: center;
+  margin-left: auto;
+  list-style: none;
+  padding-right: 0.2cm;
+}
+
+.nav-elements {
+  font-family: Verdana, Geneva, sans-serif;
+  display: inline-flex;
+  align-items: center;
+  border: 1rem;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+.nav-elements > a {
+  color: black;
+  margin-left: 3px;
+  margin-right: 3px;
+}
+
+/*  footer styling starts here */
+
+.footer-container {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+
+.footer-line {
+  width: 100%;
+}
+
+.footer-elements {
+  font-family: Verdana, Geneva, sans-serif;
+
+  align-items: center;
+  border: 1rem;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+/*  React form  styling starts here */
+
+.search-bar {
+  padding-top: 10px;
+  margin: auto;
+}

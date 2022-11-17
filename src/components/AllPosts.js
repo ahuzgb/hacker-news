@@ -5,10 +5,13 @@ export default function AllPosts({ posts }) {
       {posts
         ? posts.map((posts, key) => (
             <div key={posts.id}>
-              <h3>{posts.title}</h3>
+              <h3 onClick={() => window.open(posts.url, "_blank")}>
+                {posts.title}
+              </h3>
               <p>
-                {posts.points}
-                {posts.author}
+                Article by: {posts.author} | Points: {posts.points} | Created
+                at: {posts.created_at} | Number of comments:{" "}
+                {posts.num_comments}
               </p>
             </div>
           ))

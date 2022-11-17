@@ -1,12 +1,13 @@
 import { useEffect, useState } from "react";
 import "./App.css";
 import AllPosts from "./components/AllPosts";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 
 function App() {
-  const url =
-    "https://gist.githubusercontent.com/MyElectricSheep/4f15c82c45409e06b220d4f7b67e1534/raw/106124f0632d8167001de62a12275dcbe660c2cd/hackernews.json";
-
   const [posts, setPosts] = useState([]);
+  const [userInput, setUserInput] = useState("");
+  const url = `http://hn.algolia.com/api/v1/search?query=${userInput}&tags=story`;
 
   function fetchData() {
     fetch(url)
@@ -22,11 +23,20 @@ function App() {
   useEffect(() => {
     fetchData();
     console.log(posts);
-  }, []);
+  }, [userInput]);
 
   return (
     <div className="App">
+      <Navbar />
+      <div className=" search-bar ">
+        <input
+          type="text"
+          value={userInput}
+          onChange={(e) => setUserInput(e.target.value)}
+        />
+      </div>
       <AllPosts posts={posts} />
+      <Footer />
     </div>
   );
 }
