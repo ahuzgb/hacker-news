@@ -1,19 +1,23 @@
+import { format } from "date-fns"
 export default function AllPosts({ posts }) {
   console.log(posts);
   return (
     <div>
       {posts
         ? posts.map((posts, key) => (
-            <div key={posts.id}>
-              <h3 onClick={() => window.open(posts.url, "_blank")}>
+          <ul><li className="list"><div key={posts.id}>
+              <h3 style={{ cursor: "pointer", display: "inline-block"}}
+                   onClick={() => window.open(posts.url, "_blank")}>
+                    
                 {posts.title}
+              
               </h3>
               <p>
                 Article by: {posts.author} | Points: {posts.points} | Created
-                at: {posts.created_at} | Number of comments:{" "}
+                at: {format(new Date(posts.created_at), "dd MMM yyyy")} | Number of comments:{" "}
                 {posts.num_comments}
               </p>
-            </div>
+            </div></li></ul>
           ))
         : "No post"}
     </div>

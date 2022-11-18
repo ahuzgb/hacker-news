@@ -6,6 +6,11 @@ a,
 u {
   text-decoration: none;
 }
+
+
+
+
+
 .nav-logo {
   color: white;
   margin: 1 1 1 1;
@@ -40,7 +45,7 @@ u {
   margin-right: 30px;
 }
 
-.nav-elements > a {
+.nav-elements  a {
   color: black;
   margin-left: 3px;
   margin-right: 3px;
@@ -72,7 +77,42 @@ u {
 
 /*  React form  styling starts here */
 
+
+
+
 .search-bar {
-  padding-top: 10px;
+    padding-top: 15px;
+    padding-left: 15px;
   margin: auto;
 }
+
+.App{
+
+  background-color: rgb(240, 232, 219);
+
+}
+
+.spinner {
+  width: 4rem;
+  height: 4rem;
+  position: absolute;
+  top: 50%;
+  left: 48%;
+  transform: translate(-50%, -48%);
+  border: 0.2rem solid #c6c6c6;
+  border-top: 0.2rem solid red;
+  border-radius: 50%;
+  animation: spin 1s infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+
