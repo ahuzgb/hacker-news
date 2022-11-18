@@ -4,10 +4,11 @@ import AllPosts from "./components/AllPosts";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
+
 function App() {
   const [posts, setPosts] = useState([]);
   const [userInput, setUserInput] = useState("");
-  const url = `http://hn.algolia.com/api/v1/search?query=${userInput}&tags=story`;
+  const url = `http://hn.algolia.com/api/v1/search?query=${userInput}&tags=story&hitsPerPage=50`;
   const [isLoading, setIsLoading] = useState(true)
   
 
@@ -54,20 +55,18 @@ function App() {
               onSubmit={handleSubmit}
             
             >
-        <input
+            
+        <input 
           placeholder="Search for something..."  
           required
           type="text"
           value={userInput}
-          onChange={(e) => setUserInput(e.target.value)}
-
-        />
+          onChange={(e) => setUserInput(e.target.value)} />
         <button type="submit"
         style={{ cursor: "pointer", display: "inline-block"}}
         onClick={handleSubmit}>
           Search
         </button>
-        
         </form>)}
       </div>
       <AllPosts posts={posts} />

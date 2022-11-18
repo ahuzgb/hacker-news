@@ -5,7 +5,7 @@ export default function Navbar() {
     <div>
       <div className="nav-container">
         <div className="nav-logo">
-          <h3>HACKER NEWS</h3>
+          <h3>HACKER NEWS CLONE</h3>
         </div>
         <div className="nav-elements">
           <a href="newest">news</a> |<a href="newest">past</a> |
