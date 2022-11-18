@@ -1,3 +1,5 @@
+
+
 export default function Navbar() {
   return (
     <div>
@@ -7,7 +9,7 @@ export default function Navbar() {
         </div>
         <div className="nav-elements">
           <a href="newest">news</a> |<a href="newest">past</a> |
-          <a href="newest">comments</a> |<a href="newest">ask</a> |
+          <a href="newest"> comments</a> |<a href="newest">ask</a> |
           <a href="newest">show</a> |<a href="newest">jobs</a> |
           <a href="newest">submit</a>
         </div>
