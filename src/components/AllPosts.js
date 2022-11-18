@@ -3,25 +3,23 @@ export default function AllPosts({ posts }) {
   console.log(posts);
   return (
     <div>
-      {posts
+      <ol>{posts
         ? posts.map((posts, key) => (
-            <div key={posts.id}>
-              <li>
+          <li><div key={posts.id}>
+              
               <h3 
                style={{ cursor: "pointer", display: "inline-block" }}
               onClick={() => window.open(posts.url, "_blank")}>
                 {posts.title}
-              
-              </h3>
-              </li>
-              <p>
+                            </h3>
+                            <p>
                 Article by: {posts.author} | Points: {posts.points} | Created
                 at: {format(new Date(posts.created_at), "dd MMM yyyy")} | Number of comments:{" "}
                 {posts.num_comments}
               </p>
-            </div></li></ul>
+            </div></li>
           ))
-        : "No post"}
+        : "No post"}</ol>
     </div>
   );
 }
