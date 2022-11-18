@@ -5,13 +5,15 @@ export default function AllPosts({ posts }) {
     <div>
       {posts
         ? posts.map((posts, key) => (
-          <ul><li className="list"><div key={posts.id}>
-              <h3 style={{ cursor: "pointer", display: "inline-block"}}
-                   onClick={() => window.open(posts.url, "_blank")}>
-                    
+            <div key={posts.id}>
+              <li>
+              <h3 
+               style={{ cursor: "pointer", display: "inline-block" }}
+              onClick={() => window.open(posts.url, "_blank")}>
                 {posts.title}
               
               </h3>
+              </li>
               <p>
                 Article by: {posts.author} | Points: {posts.points} | Created
                 at: {format(new Date(posts.created_at), "dd MMM yyyy")} | Number of comments:{" "}
